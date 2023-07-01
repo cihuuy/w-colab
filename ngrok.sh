@@ -12,5 +12,4 @@ sleep 2
 
 echo "Ngrok setup completed"
 echo "========="
-
 #close
