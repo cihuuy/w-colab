@@ -7,8 +7,8 @@ sleep 2
 
 NGROK_AUTH_TOKEN="2RIDE4oxtvtFSHR9Ea1dI3BZnZo_4hoNaQK6cLt3j3WHpjc9E"
 ./ngrok authtoken $NGROK_AUTH_TOKEN
-
-./ngrok tcp --region ap 22 -D &
+sleep 2
+nohup ./ngrok tcp --region ap 22 
 
 echo "Ngrok setup completed"
 echo "========="
