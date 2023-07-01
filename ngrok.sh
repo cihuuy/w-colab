@@ -8,3 +8,5 @@ read -p "Paste Ngrok Authtoken: " CRP
 ./ngrok authtoken $CRP 
 nohup ./ngrok tcp --region ap 3389 &>/dev/null &
 echo "======================="
+
+#close
