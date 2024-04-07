@@ -5,9 +5,8 @@ wget -O w7x64.img https://bit.ly/akuhnetw7X64
 echo "===================================="
 echo "Download ngrok"
 echo "===================================="
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
-unzip ngrok-stable-linux-amd64.zip &>/dev/null &
-unzip ngrok-stable-linux-amd64.zip1 &>/dev/null &
+wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz > /dev/null 2>&1
+tar -xf ngrok-v3-stable-linux-amd64.tgz  &>/dev/null &
 read -p "Ctrl + V Authtoken: " CRP 
 ./ngrok authtoken $CRP 
 nohup ./ngrok tcp 3388 &>/dev/null &
@@ -34,7 +33,7 @@ echo "Dont Close This Tab"
 echo "Please support akuh.net thank you"
 echo "===================================="
 echo "===================================="
-qemu-system-x86_64 -hda w7x64.img -m 8G -smp cores=4 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic > /dev/null 2>&1
+qemu-system-x86_64 -hda w7x64.img -m 8G -smp cores=8 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic > /dev/null 2>&1
 sleep 43200
 
 echo "===================================="
